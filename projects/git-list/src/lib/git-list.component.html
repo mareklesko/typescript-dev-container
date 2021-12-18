@@ -2,12 +2,12 @@
   <div>{{Name}}</div>
   <div class="sub-list">
     <div class="git-item" *ngFor="let child of Children; let i=index">
-      <ng-container *ngIf="i<Children.length-1;else finalrow">
+      <!-- <ng-container *ngIf="i<Children.length-1;else finalrow">
         <div class="row">
           <div class="upper-row"></div>
           <div class="lower-row"></div>
         </div>
-      </ng-container>
+      </ng-container> -->
       <div class="nested-list">
         <git-list [Name]="child.Name" [Children]="child.Children" class="git-list">
         </git-list>

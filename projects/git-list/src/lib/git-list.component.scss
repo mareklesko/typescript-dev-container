@@ -4,6 +4,15 @@ $color: darkgrey;
   // background-color: rgba(0, 0, 0, 0.1);
   margin-left: 16px;
 }
+
+.sub-list {
+  .git-item {
+    border-left: $width solid $color;
+  }
+  :last-child {
+    border-left: none;
+  }
+}
 .git-item {
   display: flex;
   flex-direction: row;
@@ -15,8 +24,6 @@ $color: darkgrey;
 .row {
   display: flex;
   flex-direction: column;
-  // flex: 1;
-}
 .upper-row {
   border-left: $width solid $color;
   height: 16px;
