@@ -1,0 +1,25 @@
+<div class="container">
+  <div>{{Name}}</div>
+  <div class="sub-list">
+    <div class="git-item" *ngFor="let child of Children; let i=index">
+      <ng-container *ngIf="i<Children.length-1;else finalrow">
+        <div class="row">
+          <div class="upper-row"></div>
+          <div class="lower-row"></div>
+        </div>
+      </ng-container>
+      <div class="nested-list">
+        <git-list [Name]="child.Name" [Children]="child.Children" class="git-list">
+        </git-list>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <ng-container *ngTemplateOutlet="row"></ng-container> -->
+<ng-template #row>
+  <div class="upper-row"></div>
+  <div class="lower-row"></div>
+</ng-template>
+<ng-template #finalrow>
+  <div class="upper-row"></div>
+</ng-template>

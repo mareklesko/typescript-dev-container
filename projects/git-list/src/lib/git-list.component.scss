@@ -1,0 +1,30 @@
+$width: 2px;
+$color: darkgrey;
+.container {
+  // background-color: rgba(0, 0, 0, 0.1);
+  margin-left: 16px;
+}
+.git-item {
+  display: flex;
+  flex-direction: row;
+}
+.nested-list {
+  display: flex;
+  align-items: center;
+}
+.row {
+  display: flex;
+  flex-direction: column;
+  // flex: 1;
+}
+.upper-row {
+  border-left: $width solid $color;
+  height: 16px;
+  width: 16px;
+  border-bottom: $width solid $color;
+}
+.lower-row {
+  border-left: $width solid $color;
+  height: 16px;
+  width: 16px;
+}
