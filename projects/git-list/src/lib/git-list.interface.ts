@@ -1,4 +1,4 @@
 export interface IGitList {
-  Name: string;
+  Name: string | undefined;
   Children: IGitList[];
 }

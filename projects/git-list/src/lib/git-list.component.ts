@@ -7,8 +7,9 @@ import { IGitList } from './git-list.interface';
   styleUrls: ['./git-list.component.scss'],
 })
 export class GitListComponent implements IGitList, OnInit {
-  @Input() Name: string = '';
+  @Input() Name: string | undefined = "";
   @Input() Children: IGitList[] = [];
+  @Input() TopLevel: boolean = false;
   constructor() { }
 
   ngOnInit(): void {
